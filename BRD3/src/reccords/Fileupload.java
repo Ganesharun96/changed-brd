@@ -18,34 +18,34 @@ public class Fileupload {
 		if(file.endsWith(".txt"))
 		{
 
-		  FileReader fr = new FileReader(file);
-			BufferedReader br = new BufferedReader(fr);
+		  FileReader filereader = new FileReader(file);
+			BufferedReader bufferedReader = new BufferedReader(filereader);
 			String string;
 
-			while ((string = br.readLine()) != null) {
+			while ((string = bufferedReader.readLine()) != null) {
 				string+="~";
 				listOfLines.add(string);
 
 			} 
 			
-			String[] removed = new  String[16];
+			String[] fields = new  String[16];
 			int count=0;
 			for(int i =0;i<listOfLines.size();i++) {
-				String s1 = listOfLines.get(i);	
-               String[] ss = s1.split("(?<=~)");
+				String record = listOfLines.get(i);	
+               String[] sepratingUptoSplilt = record.split("(?<=~)");
                
 
 				for(int j=0;j<16;j++)  
 				{
-					removed[j]=ss[j].substring(0, ss[j].lastIndexOf("~"));
-					System.out.println(removed[j]);
+					fields[j]=sepratingUptoSplilt[j].substring(0, sepratingUptoSplilt[j].lastIndexOf("~"));
+					System.out.println(fields[j]);
 				
 					
 				}
 				
-			if(validator(removed)==true)
+			if(validator(fields)==true)
 			{
-				database.customer( Integer.toString(count +=1),removed[0],removed[1],removed[2],removed[3],removed[4],removed[5],removed[6],removed[7],removed[8],removed[9],removed[10],removed[11],removed[12],removed[13],removed[14],removed[15]);
+				database.customer( Integer.toString(count +=1),fields[0],fields[1],fields[2],fields[3],fields[4],fields[5],fields[6],fields[7],fields[8],fields[9],fields[10],fields[11],fields[12],fields[13],fields[14],fields[15]);
 				
 			}
 			else {
@@ -71,13 +71,13 @@ public class Fileupload {
 	}
 	
 		
-	public static boolean validator(String[] removed)
+	public static boolean validator(String[] fields)
 	{
-		boolean pincodes= pincode(removed[4]);
-		boolean customernames=customername(removed[1]);
-		boolean emails=email(removed[5]);
-		boolean RecordStatuss=RecordStatus(removed[8]);
-		boolean flags=flag(removed[9]);
+		boolean pincodes= pincode(fields[4]);
+		boolean customernames=customername(fields[1]);
+		boolean emails=email(fields[5]);
+		boolean RecordStatuss=RecordStatus(fields[8]);
+		boolean flags=flag(fields[9]);
 		
 		if( pincodes&&customernames&&emails&&RecordStatuss&&flags)
 		{
