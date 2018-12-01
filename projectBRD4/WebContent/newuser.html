@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+
+
+
+
+
+<title>User Data</title>
+</head>
+<style>
+div.ex {
+	text-align: right width:300px;
+	padding: 10px;
+	border: 5px solid grey;
+	margin: 0px
+}
+</style>
+<body>
+	<h1>Registration Form</h1>
+	<div class="ex">
+		<form action="RegistrationController" method="post" onsubmit="validateForm();">
+			<table style="with: 50%">
+				<tr>
+					
+				<tr>
+					<td>Customer_Code</td>
+					<td><input type="text" name="Customer_Code" id="Customer_Code" required="" /></td>
+				</tr>
+				<tr>
+					<td>Customer_Name</td>
+					<td><input type="text" name="Customer_Name"  id="Customer_Name"required=""/></td>
+				</tr>
+				<tr>
+					<td>Customer_Address1</td>
+					<td><input type="text" name="Customer_Address1" id="Customer_Address1"required=""/></td>
+				</tr>
+				<tr>
+					<td>Customer_Address2</td>
+					<td><input type="text" name="Customer_Address2" id="Customer_Address2"/></td>
+				</tr>
+				<tr>
+					<td>Customer_PinCode</td>
+					<td><input type="text" name="Customer_PinCode" id="Customer_PinCode"required="" /></td>
+				</tr>
+				<tr>
+					<td>Email_Address</td>
+					<td><input type="email" name="Email_Address"  id="Email_Address"required=""/></td>
+				</tr>
+				<tr>
+					<td> Contact_Number</td>
+					<td><input type="number" name="Contact_Number" id="Contact_Number"required="" /></td>
+				</tr>
+				<tr>
+					<td>Primary_Contact</td>
+					<td><input type="number" name="Primary_Contact" id="Primary_Contact" /></td>
+				</tr>
+				<tr>
+					<td>Record_Status</td>
+					<td><input type="text" name="Record_Status" id="Record_Status"required="" /></td>
+				</tr>
+				<tr>
+					<td>Active_Inactive_Flag</td>
+					<td><input type="text" name="Active_Inactive_Flag" id="Active_Inactive_Flag"required="" /></td>
+				</tr>
+				<tr>
+					<td>Create_Date</td>
+					<td><input type="date" name="Create_Date" id="Create_Date"required=""  /></td>
+				</tr>
+				<tr>
+					<td>Created_By</td>
+					<td><input type="text" name="Created_By"  id="Created_By"required=""/></td>
+				</tr>
+				<tr>
+					<td>Modified_Date</td>
+					<td><input type="date" name="Modified_Date" id="Modified_Date" /></td>
+				</tr>
+				<tr>
+					<td>Modified_By</td>
+					<td><input type="text" name="Modified_By" id="Modified_By" /></td>
+				</tr>
+				<tr>
+					<td>Authorized_Date</td>
+					<td><input type="date" name="Authorized_Date" id="Authorized_Date"/></td>
+				</tr>
+				<tr>
+					<td>Authorized_By</td>
+					<td><input type="text" name="Authorized_By" id="Authorized_By" /></td>
+				</tr>
+			</table>
+			<input type="submit" value="register" />
+		</form>
+		<br>
+	
+	
+		
+		
+	</div>
+</body>
+</html>
