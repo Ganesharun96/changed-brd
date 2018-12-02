@@ -48,6 +48,10 @@ public class loginuser extends HttpServlet {
 		String Authorized_Date = request.getParameter("Authorized_Date");
 		String Authorized_By = request.getParameter("Authorized_By");
 		
+		}catch (ClassNotFoundException exception) {
+			System.out.println(exception);
+		} catch (SQLException exception) {
+			System.out.println(exception);
 		}
 	}
 		
