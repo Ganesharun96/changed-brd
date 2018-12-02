@@ -48,10 +48,12 @@ public class loginuser extends HttpServlet {
 		String Authorized_Date = request.getParameter("Authorized_Date");
 		String Authorized_By = request.getParameter("Authorized_By");
 		
+		}
+	}
 		
-		
+		public static void customer(String Customer_ID, String Customer_Code,String Customer_Name,String Customer_Address1,String Customer_Address2,String Customer_PinCode,String Email_Address,String Contact_Number,String Primary_Contact ,String Record_Status,String Active_Inactive_Flag,String Create_Date,String Created_By,String Modified_Date,String Modified_By,String Authorized_Date,String Authorized_By ) throws ClassNotFoundException {
 
-	
+			try {
 	
 //		String	names=name;
 //		String	passwords=password;
@@ -85,7 +87,9 @@ public class loginuser extends HttpServlet {
 //			System.out.println(noOfRowsAffected + " row(s) inserted!");
 			
 			preparedStatement.executeUpdate();
-}catch (SQLException | ClassNotFoundException exception) {
+}catch (ClassNotFoundException exception) {
+	System.out.println(exception);
+} catch (SQLException exception) {
 	System.out.println(exception);
 }
 	}
